@@ -7,20 +7,41 @@ public class ClienteTest {
 
     @Test
     public void testClienteHerdaPessoa() {
-        Cliente cliente = new Cliente("John Doe");
+        Cliente cliente = new Cliente("Douglas Nunes");
+
+        assertEquals("Douglas", cliente.getPrimeiroNome());
+        assertEquals("Nunes", cliente.getUltimoNome());
+        assertEquals("DOUGLAS NUNES", cliente.getNomeMaiusculo());
+        assertEquals("Douglas N.", cliente.getNomeAbreviado());
+    }
+
+    @Test
+    public void testClienteHerdaPessoaNomeComposto() {
+        Cliente cliente = new Cliente("Douglas Nunes Souza");
 
         // Testar métodos herdados de Pessoa
-        assertEquals("John", cliente.getPrimeiroNome());
-        assertEquals("Doe", cliente.getUltimoNome());
-        assertEquals("JOHN DOE", cliente.getNomeMaiusculo());
-        assertEquals("John D. Doe", cliente.getNomeAbreviado());
+        assertEquals("Douglas", cliente.getPrimeiroNome());
+        assertEquals("Nunes Souza", cliente.getUltimoNome());
+        assertEquals("DOUGLAS NUNES SOUZA", cliente.getNomeMaiusculo());
+        assertEquals("Douglas N. Souza", cliente.getNomeAbreviado());
+    }
+
+    @Test
+    public void testClienteHerdaPessoaNomeDuasPartes() {
+        Cliente cliente = new Cliente("Douglas Nunes");
+
+        // Testar métodos herdados de Pessoa
+        assertEquals("Douglas", cliente.getPrimeiroNome());
+        assertEquals("Nunes", cliente.getUltimoNome());
+        assertEquals("DOUGLAS NUNES", cliente.getNomeMaiusculo());
+        assertEquals("Douglas N.", cliente.getNomeAbreviado());
     }
 
     @Test
     public void testSetNomeValido() {
-        Cliente cliente = new Cliente("John Doe");
-        cliente.setNome("Jane Doe");
-        assertEquals("Jane Doe", cliente.getNome());
+        Cliente cliente = new Cliente("Douglas Nunes");
+        cliente.setNome("Jane Nunes");
+        assertEquals("Jane Nunes", cliente.getNome());
     }
 
     @Test
@@ -39,7 +60,7 @@ public class ClienteTest {
 
     @Test
     public void testSetNomeComEspacosExtras() {
-        Cliente cliente = new Cliente(" John Doe ");
-        assertEquals("John Doe", cliente.getNome());
+        Cliente cliente = new Cliente(" Douglas Nunes ");
+        assertEquals("Douglas Nunes", cliente.getNome());
     }
 }

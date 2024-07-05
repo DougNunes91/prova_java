@@ -39,14 +39,16 @@ public abstract class Pessoa {
         String[] partes = nome.split(" ");
         if (partes.length == 1) {
             return partes[0];
+        } else if (partes.length == 2) {
+            return partes[0] + " " + partes[1].charAt(0) + ".";
+        } else {
+            StringBuilder abreviado = new StringBuilder();
+            abreviado.append(partes[0]);
+            for (int i = 1; i < partes.length - 1; i++) {
+                abreviado.append(" ").append(partes[i].charAt(0)).append(".");
+            }
+            abreviado.append(" ").append(partes[partes.length - 1]);
+            return abreviado.toString();
         }
-        StringBuilder abreviado = new StringBuilder();
-        abreviado.append(partes[0]);
-        for (int i = 1; i < partes.length - 1; i++) {
-            abreviado.append(" ").append(partes[i].charAt(0)).append(".");
-        }
-        abreviado.append(" ").append(partes[partes.length - 1]);
-        return abreviado.toString();
     }
 }
-

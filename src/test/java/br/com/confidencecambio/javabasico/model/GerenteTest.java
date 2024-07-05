@@ -7,20 +7,41 @@ public class GerenteTest {
 
     @Test
     public void testGerenteHerdaPessoa() {
-        Gerente gerente = new Gerente("John Doe");
+        Gerente gerente = new Gerente("Douglas Nunes");
+
+        assertEquals("Douglas", gerente.getPrimeiroNome());
+        assertEquals("Nunes", gerente.getUltimoNome());
+        assertEquals("DOUGLAS NUNES", gerente.getNomeMaiusculo());
+        assertEquals("Douglas N.", gerente.getNomeAbreviado());
+    }
+
+    @Test
+    public void testGerenteHerdaPessoaNomeComposto() {
+        Gerente gerente = new Gerente("Douglas Nunes Souza");
 
         // Testar métodos herdados de Pessoa
-        assertEquals("John", gerente.getPrimeiroNome());
-        assertEquals("Doe", gerente.getUltimoNome());
-        assertEquals("JOHN DOE", gerente.getNomeMaiusculo());
-        assertEquals("John D. Doe", gerente.getNomeAbreviado());
+        assertEquals("Douglas", gerente.getPrimeiroNome());
+        assertEquals("Nunes Souza", gerente.getUltimoNome());
+        assertEquals("DOUGLAS NUNES SOUZA", gerente.getNomeMaiusculo());
+        assertEquals("Douglas N. Souza", gerente.getNomeAbreviado());
+    }
+
+    @Test
+    public void testGerenteHerdaPessoaNomeDuasPartes() {
+        Gerente gerente = new Gerente("Douglas Nunes");
+
+        // Testar métodos herdados de Pessoa
+        assertEquals("Douglas", gerente.getPrimeiroNome());
+        assertEquals("Nunes", gerente.getUltimoNome());
+        assertEquals("DOUGLAS NUNES", gerente.getNomeMaiusculo());
+        assertEquals("Douglas N.", gerente.getNomeAbreviado());
     }
 
     @Test
     public void testSetNomeValido() {
-        Gerente gerente = new Gerente("John Doe");
-        gerente.setNome("Jane Doe");
-        assertEquals("Jane Doe", gerente.getNome());
+        Gerente gerente = new Gerente("Douglas Nunes");
+        gerente.setNome("Jane Nunes");
+        assertEquals("Jane Nunes", gerente.getNome());
     }
 
     @Test
@@ -39,7 +60,7 @@ public class GerenteTest {
 
     @Test
     public void testSetNomeComEspacosExtras() {
-        Gerente gerente = new Gerente(" John Doe ");
-        assertEquals("John Doe", gerente.getNome());
+        Gerente gerente = new Gerente(" Douglas Nunes ");
+        assertEquals("Douglas Nunes", gerente.getNome());
     }
 }

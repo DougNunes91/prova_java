@@ -1,2 +1,8 @@
-br/com/confidencecambio/javabasico/service/HelloServiceTest.class
-br/com/confidencecambio/javabasico/JavaBasicoApplicationTests.class
+br\com\confidencecambio\javabasico\model\RoboTest.class
+br\com\confidencecambio\javabasico\model\GerenteTest.class
+br\com\confidencecambio\javabasico\controller\ImcControllerTest.class
+br\com\confidencecambio\javabasico\service\impl\ImcServiceImplTest.class
+br\com\confidencecambio\javabasico\JavaBasicoApplicationTests.class
+br\com\confidencecambio\javabasico\model\PessoaTest.class
+br\com\confidencecambio\javabasico\model\ClienteTest.class
+br\com\confidencecambio\javabasico\model\PessoaTest$PessoaTeste.class

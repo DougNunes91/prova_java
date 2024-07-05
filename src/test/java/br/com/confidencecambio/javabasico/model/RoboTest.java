@@ -7,20 +7,41 @@ public class RoboTest {
 
     @Test
     public void testRoboHerdaPessoa() {
-        Robo robo = new Robo("John Doe");
+        Robo robo = new Robo("Douglas Nunes");
+
+        assertEquals("Douglas", robo.getPrimeiroNome());
+        assertEquals("Nunes", robo.getUltimoNome());
+        assertEquals("DOUGLAS NUNES", robo.getNomeMaiusculo());
+        assertEquals("Douglas N.", robo.getNomeAbreviado());
+    }
+
+    @Test
+    public void testRoboHerdaPessoaNomeComposto() {
+        Robo robo = new Robo("Douglas Nunes Souza");
 
         // Testar métodos herdados de Pessoa
-        assertEquals("John", robo.getPrimeiroNome());
-        assertEquals("Doe", robo.getUltimoNome());
-        assertEquals("JOHN DOE", robo.getNomeMaiusculo());
-        assertEquals("John D. Doe", robo.getNomeAbreviado());
+        assertEquals("Douglas", robo.getPrimeiroNome());
+        assertEquals("Nunes Souza", robo.getUltimoNome());
+        assertEquals("DOUGLAS NUNES SOUZA", robo.getNomeMaiusculo());
+        assertEquals("Douglas N. Souza", robo.getNomeAbreviado());
+    }
+
+    @Test
+    public void testRoboHerdaPessoaNomeDuasPartes() {
+        Robo robo = new Robo("Douglas Nunes");
+
+        // Testar métodos herdados de Pessoa
+        assertEquals("Douglas", robo.getPrimeiroNome());
+        assertEquals("Nunes", robo.getUltimoNome());
+        assertEquals("DOUGLAS NUNES", robo.getNomeMaiusculo());
+        assertEquals("Douglas N.", robo.getNomeAbreviado());
     }
 
     @Test
     public void testSetNomeValido() {
-        Robo robo = new Robo("John Doe");
-        robo.setNome("Jane Doe");
-        assertEquals("Jane Doe", robo.getNome());
+        Robo robo = new Robo("Douglas Nunes");
+        robo.setNome("Jane Nunes");
+        assertEquals("Jane Nunes", robo.getNome());
     }
 
     @Test
@@ -39,7 +60,7 @@ public class RoboTest {
 
     @Test
     public void testSetNomeComEspacosExtras() {
-        Robo robo = new Robo(" John Doe ");
-        assertEquals("John Doe", robo.getNome());
+        Robo robo = new Robo(" Douglas Nunes ");
+        assertEquals("Douglas Nunes", robo.getNome());
     }
 }

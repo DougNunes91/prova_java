@@ -1,3 +1,8 @@
-br/com/confidencecambio/javabasico/HelloWorldRs.class
-br/com/confidencecambio/javabasico/service/HelloService.class
-br/com/confidencecambio/javabasico/JavaBasicoApplication.class
+br\com\confidencecambio\javabasico\model\Pessoa.class
+br\com\confidencecambio\javabasico\model\Cliente.class
+br\com\confidencecambio\javabasico\JavaBasicoApplication.class
+br\com\confidencecambio\javabasico\model\Robo.class
+br\com\confidencecambio\javabasico\service\ImcService.class
+br\com\confidencecambio\javabasico\model\Gerente.class
+br\com\confidencecambio\javabasico\controller\ImcController.class
+br\com\confidencecambio\javabasico\service\impl\ImcServiceImpl.class

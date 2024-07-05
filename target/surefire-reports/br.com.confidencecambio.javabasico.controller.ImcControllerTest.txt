@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.confidencecambio.javabasico.controller.ImcControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.432 s - in br.com.confidencecambio.javabasico.controller.ImcControllerTest

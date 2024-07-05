@@ -13,39 +13,39 @@ public class PessoaTest {
 
     @Test
     public void testGetPrimeiroNome() {
-        Pessoa pessoa = new PessoaTeste("John Doe");
-        assertEquals("John", pessoa.getPrimeiroNome());
+        Pessoa pessoa = new PessoaTeste("Douglas Nunes");
+        assertEquals("Douglas", pessoa.getPrimeiroNome());
     }
 
     @Test
     public void testGetUltimoNome() {
-        Pessoa pessoa = new PessoaTeste("John Doe");
-        assertEquals("Doe", pessoa.getUltimoNome());
+        Pessoa pessoa = new PessoaTeste("Douglas Nunes");
+        assertEquals("Nunes", pessoa.getUltimoNome());
     }
 
     @Test
     public void testGetNomeMaiusculo() {
-        Pessoa pessoa = new PessoaTeste("John Doe");
-        assertEquals("JOHN DOE", pessoa.getNomeMaiusculo());
+        Pessoa pessoa = new PessoaTeste("Douglas Nunes");
+        assertEquals("DOUGLAS NUNES", pessoa.getNomeMaiusculo());
     }
 
     @Test
     public void testGetNomeAbreviado() {
-        Pessoa pessoa = new PessoaTeste("John Michael Doe");
-        assertEquals("John M. Doe", pessoa.getNomeAbreviado());
+        Pessoa pessoa = new PessoaTeste("Douglas Souza Nunes");
+        assertEquals("Douglas S. Nunes", pessoa.getNomeAbreviado());
     }
 
     @Test
     public void testGetNomeAbreviadoNomeSimples() {
-        Pessoa pessoa = new PessoaTeste("John");
-        assertEquals("John", pessoa.getNomeAbreviado());
+        Pessoa pessoa = new PessoaTeste("Douglas");
+        assertEquals("Douglas", pessoa.getNomeAbreviado());
     }
 
     @Test
     public void testSetNomeValido() {
-        Pessoa pessoa = new PessoaTeste("John Doe");
-        pessoa.setNome("Jane Doe");
-        assertEquals("Jane Doe", pessoa.getNome());
+        Pessoa pessoa = new PessoaTeste("Douglas Nunes");
+        pessoa.setNome("Jane Nunes");
+        assertEquals("Jane Nunes", pessoa.getNome());
     }
 
     @Test
@@ -64,7 +64,7 @@ public class PessoaTest {
 
     @Test
     public void testSetNomeComEspacosExtras() {
-        Pessoa pessoa = new PessoaTeste(" John Doe ");
-        assertEquals("John Doe", pessoa.getNome());
+        Pessoa pessoa = new PessoaTeste(" Douglas Nunes ");
+        assertEquals("Douglas Nunes", pessoa.getNome());
     }
 }
